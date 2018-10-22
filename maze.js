@@ -47,6 +47,12 @@ window.onload = function(){
 			end.removeEventListener("mouseover",msg1);		
 			}
 
+	//Exercise 4
+		
+		start.addEventListener("click",function(){
+			location.reload();
+		});
+
 
 	});
 }
