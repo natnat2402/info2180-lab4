@@ -3,14 +3,34 @@ window.onload = function(){
 	let start = document.getElementById("start");
 	start.addEventListener("mouseover", function(){
 	
-		let list = document.getElementsByClassName("boundary");
+		/*let list = document.getElementsByClassName("boundary");
 		for(var i = 0 ; i < 5; i++){
 			list[i].onmouseover = function(){
 				this.classList.add("youlose");
 				msg2();
 				removelistener();		
 			}
-		}
+		}*/
+
+	//Exercise 2 
+	//to test exercise 2 please comment out exercise 1 and uncomment line 33
+		function ex2(){
+			var i= 0;
+			let list2 = document.querySelectorAll("div");
+
+			for ( i=2; i < 7 ; i++){
+				list2[i].addEventListener("mouseover",function(){
+					list2[2].classList.add("youlose");
+					list2[3].classList.add("youlose");
+					list2[4].classList.add("youlose");
+					list2[5].classList.add("youlose");
+					list2[6].classList.add("youlose");
+					msg2();
+					removelistener();
+				});
+			}
+		} 
+//ex();
 		
 	});
 }
