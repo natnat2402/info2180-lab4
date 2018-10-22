@@ -53,6 +53,18 @@ window.onload = function(){
 			location.reload();
 		});
 
+	//Exercise 5
+		let status = document.getElementById("status");
+
+		function msg1(){
+			status.innerHTML = "SUCCESS\nYou Win";
+		}
+		function msg2(){
+			status.innerHTML = "You touched the wall\nYou lose";	
+		}
+
+
+
 
 	});
 }
