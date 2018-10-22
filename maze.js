@@ -63,8 +63,23 @@ window.onload = function(){
 			status.innerHTML = "You touched the wall\nYou lose";	
 		}
 
+	//Exercise 6
 
-
+		let maze = document.getElementById("maze");
+		maze.addEventListener("mouseleave",illegal);
+		function illegal(){	
+			let list3 = document.querySelectorAll("div");
+			list3[2].classList.add("youlose");
+			list3[3].classList.add("youlose");
+			list3[4].classList.add("youlose");
+			list3[5].classList.add("youlose");
+			list3[6].classList.add("youlose");
+			status.innerHTML = "You illegally left the maze You Lose !";
+			removelistener();
+		}
+		end.addEventListener("mouseleave",function(){
+			maze.removeEventListener("mouseleave",illegal);	
+		});
 
 	});
 }
